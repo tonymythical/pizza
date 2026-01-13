@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poppa's Pizza</title>
+    <title>Big Poppa's Pizza</title>
 
     <!-- favicon -->
     <link rel="icon" href="images/pizza-slice.jpg">
@@ -15,14 +15,49 @@
     <main>
         <header>
             <img src="images/pizza-delivery-guy.gif" alt="pizza guy">
-            <h1>Welcome to Poppa's Pizza</h1>
+            <h1>Welcome to Big Poppa's Pizza</h1>
             <h2>Serving GRC Students for 50 Years</h2>
             <hr>
-            <a id = "orderButton" href="https://www.papajohns.com/omni/en">Order Here</a>
         </header>
-    </main>
-    <form>
+        <form id="pizza-form" action="#" method="get">
+    
+            <!-- Contact Info -->
+            <fieldset>
+                <legend>Contact Information</legend>
+    
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname">
+    
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname">
+    
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+    
+            </fieldset>
+            <fieldset>
+                <legend>Select Pickup or Delivery</legend>
 
-    </form>
+                <label for="pickup">Pickup</label>
+                <input type="radio" id="pickup" name="method">
+
+                <label for="delivery">Delivery</label>
+                <input type="radio" id="delivery" name="method">
+
+            </fieldset>
+            <fieldset>
+                <legend>Select Toppings</legend>
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                <label for="mushrooms">Mushrooms</label>
+                <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                <label for="onions">Onions</label>
+                <input type="checkbox" id="onions" name="toppings" value="onions">
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit" id="orderButton">Place Order</button>
+        </form>
+    </main>
 </body>
 </html>
