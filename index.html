@@ -1,63 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Big Poppa's Pizza</title>
 
     <!-- favicon -->
-    <link rel="icon" href="images/pizza-slice.jpg">
+    <link rel="icon" href="images/pizza-slice.jpg" />
 
     <!-- stylesheet -->
-     <link rel="stylesheet" href="styles/pizza-styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/pizza-styles.css" />
+  </head>
+  <body>
     <main>
-        <header>
-            <img src="images/pizza-delivery-guy.gif" alt="pizza guy">
-            <h1>Welcome to Big Poppa's Pizza</h1>
-            <h2>Serving GRC Students for 50 Years</h2>
-            <hr>
-        </header>
-        <form id="pizza-form" action="#" method="get">
-    
-            <!-- Contact Info -->
-            <fieldset>
-                <legend>Contact Information</legend>
-    
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname">
-    
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname">
-    
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email">
-    
-            </fieldset>
-            <fieldset>
-                <legend>Select Pickup or Delivery</legend>
+      <header>
+        <img src="images/pizza-delivery-guy.gif" alt="pizza guy" />
+        <h1>Welcome to Big Poppa's Pizza</h1>
+        <h2>Serving GRC Students for 50 Years</h2>
+        <hr />
+      </header>
+      <form id="pizza-form" action="#" method="get">
+        <!-- Contact Info -->
+        <fieldset>
+          <legend>Contact Information</legend>
 
-                <label for="pickup">Pickup</label>
-                <input type="radio" id="pickup" name="method">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" />
 
-                <label for="delivery">Delivery</label>
-                <input type="radio" id="delivery" name="method">
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname" />
 
-            </fieldset>
-            <fieldset>
-                <legend>Select Toppings</legend>
-                <label for="pepperoni">Pepperoni</label>
-                <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
-                <label for="mushrooms">Mushrooms</label>
-                <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
-                <label for="onions">Onions</label>
-                <input type="checkbox" id="onions" name="toppings" value="onions">
-            </fieldset>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+        </fieldset>
+        <fieldset>
+          <legend>Select Pickup or Delivery</legend>
 
-            <!-- Submit Button -->
-            <button type="submit" id="orderButton">Place Order</button>
-        </form>
+          <label for="pickup">Pickup</label>
+          <input type="radio" id="pickup" name="method" />
+
+          <label for="delivery">Delivery</label>
+          <input type="radio" id="delivery" name="method" />
+        </fieldset>
+        <fieldset>
+          <legend>Select Toppings</legend>
+          <label for="pepperoni">Pepperoni</label>
+          <input
+            type="checkbox"
+            id="pepperoni"
+            name="toppings"
+            value="pepperoni"
+          />
+          <label for="mushrooms">Mushrooms</label>
+          <input
+            type="checkbox"
+            id="mushrooms"
+            name="toppings"
+            value="mushrooms"
+          />
+          <label for="onions">Onions</label>
+          <input type="checkbox" id="onions" name="toppings" value="onions" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Select Size</legend>
+          <select id="size" name="size">
+            <option value="">--Please choose an option--</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="extra-large">Extra Large</option>
+          </select>
+        </fieldset>
+        <label for="comments">Comments/Instructions</label>
+        <textarea id="comments" name="comments" rows="5"></textarea>
+
+        <div class="discount-container">
+          <input type="checkbox" id="discount" name="discount" checked />
+          <label for="discount">Sign me up for discounts!</label>
+        </div>
+
+        <button type="submit" id="orderButton">Place Order</button>
+      </form>
     </main>
-</body>
+  </body>
 </html>
