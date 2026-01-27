@@ -1,5 +1,7 @@
 document.getElementById("pizza-form").onsubmit = () => {
-  
+   
+  clearErrors();
+
   let isValid = true;
 
   //Validate first name
@@ -16,5 +18,26 @@ document.getElementById("pizza-form").onsubmit = () => {
     isValid = false;
   }
 
+  //Validate email
+  let email = document.getElementById("email").value.trim();
+  if(!email) {
+    document.getElementById("err-email").style.display = "block";
+    isValid = false;
+  }
+
+  //Validate size
+  let size = document.getElementById("size").value.trim();
+  if(!size) {
+    document.getElementById("err-size").style.display = "block";
+    isValid = false;
+  }
+
   return isValid;
 };
+
+function clearErrors() {
+    let errors = document.getElementsByClassName("err");
+    for(let i=0; i<errors.length; i++) {
+        errors[i].style.display = "none";
+    }
+}

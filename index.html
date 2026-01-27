@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,18 +28,15 @@
           <legend>Contact Information</legend>
 
           <label for="fname">First Name:</label>
-            <span class="err" id="err-fname">
-              First name is required
-            </span>
+          <span class="err" id="err-fname"> First name is required </span>
           <input type="text" id="fname" name="fname" />
 
           <label for="lname">Last Name:</label>
-            <span class="err" id="err-lname">
-              Last name is required
-            </span>
+          <span class="err" id="err-lname"> Last name is required </span>
           <input type="text" id="lname" name="lname" />
 
           <label for="email">Email:</label>
+          <span class="err" id="err-email"> Email is required </span>
           <input type="text" id="email" name="email" />
         </fieldset>
         <fieldset>
@@ -73,6 +70,7 @@
 
         <fieldset>
           <legend>Select Size</legend>
+            <span class="err" id="err-size"> Size is required </span>
           <select id="size" name="size">
             <option value="">--Please choose an option--</option>
             <option value="small">Small</option>
