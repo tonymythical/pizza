@@ -99,3 +99,8 @@ select {
   display: inline; 
   padding-bottom: 0; 
 }
+
+.err {
+  color: darkred;
+  display: none;
+}
