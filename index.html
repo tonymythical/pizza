@@ -41,7 +41,9 @@
         </fieldset>
         <fieldset>
           <legend>Select Pickup or Delivery</legend>
-
+          <span class="err" id="err-method">
+            Please select pickup or delivery
+          </span>
           <label for="pickup">Pickup</label>
           <input type="radio" id="pickup" name="method" />
 
@@ -70,9 +72,9 @@
 
         <fieldset>
           <legend>Select Size</legend>
-            <span class="err" id="err-size"> Size is required </span>
+          <span class="err" id="err-size"> Size is required </span>
           <select id="size" name="size">
-            <option value="">--Please choose an option--</option>
+            <option value="none">--Please choose an option--</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
