@@ -34,6 +34,11 @@ app.get('/thank-you', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 });
 
+// Admin route
+app.get('/admin', (req, res) => {
+    res.send(orders);
+});
+
 app.post('/submit-order', (req, res) => {
 
     const order = {
@@ -46,7 +51,11 @@ app.post('/submit-order', (req, res) => {
         comments: req.body.comments,
         timestamp: new Date()
     };
-    res.send(order);
+
+    // Add order object to orders array 
+    orders.push(order);
+
+    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 });
 
 // Start the server and listen on the specified port
