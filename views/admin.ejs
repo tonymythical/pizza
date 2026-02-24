@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
 </head>
 <body>
+    <h1>Order Summary</h1>
+    <table id="order-table" class="display">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Pickup or Delivery</th>
+                <th>Toppings</th>
+                <th>Size</th>
+                <th>Comments</th>
+                <th>Date/Time</th>
+            </tr>
+        </thead>
+    </table>
     <% orders.forEach(order => { %>
-        <p>Order</p>
+        <tr>
+            <td><%= order.fname %> <%= order.lname %></td>
+            <td><%= order.email %></td>
+            <td><%= order.method %></td>
+            <td><%= Array.isArray(order.toppings) ? order.toppings.join(", ") : order.toppings %></td>
+            <td><%= order.size %></td>
+            <td><%= order.comments %></td>
+            <td><%= order.timestamp %></td>
+        </tr>
     <% }) %>
 </body>
 </html>
