@@ -58,7 +58,7 @@ app.post('/submit-order', (req, res) => {
     // Add order object to orders array 
     orders.push(order);
 
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+    res.render('confirmation');
 });
 
 // Start the server and listen on the specified port
