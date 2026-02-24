@@ -29,12 +29,12 @@ app.get('/', (req, res) => {
 
 // Contact route
 app.get('/contact', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/contact.html`);
+    res.render('contact');
 });
 
 // Confirmation route
 app.get('/thank-you', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+    res.render('confirmation');
 });
 
 // Admin route
