@@ -39,7 +39,7 @@ app.get('/thank-you', (req, res) => {
 
 // Admin route
 app.get('/admin', (req, res) => {
-    res.send(orders);
+    res.render('admin');
 });
 
 app.post('/submit-order', (req, res) => {
