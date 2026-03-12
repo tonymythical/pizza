@@ -18,11 +18,15 @@ export function validateForm(data) {
     const errors = [];
 
     // Validate first name
-    if (data.fname.trim() == "") {
+    if (data.lname.trim() == "") {
         errors.push("First name is required.");
     }
 
     // Validate last name
 
     console.log(errors);
+    return {
+        isValid: errors.length === 0,
+        errors
+    };
 }
