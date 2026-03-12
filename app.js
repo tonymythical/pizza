@@ -22,13 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 const orders = [];
 
 // Create a pool (bucket) of database connections
-const pool = mysql2.createPool({
-    host: '209.38.128.251',
-    user: 'admin',
-    password: 'T9M87z68',
-    database: 'pizza_db',
-    port: 3306
-}).promise();
+
 
 // Database test route
 app.get('/db-test', async (req, res) => {
